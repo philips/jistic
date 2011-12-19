@@ -1,0 +1,13 @@
+startup_message off
+
+hardstatus alwayslastline
+hardstatus string 'window %n: %t Hint: Press Ctrl+A " for window list'
+
+screen -t zookeeper 1
+stuff "cd vendor/kafka; bin/zookeeper-server-start.sh config/zookeeper.properties\012"
+
+screen -t kafka 2
+stuff "cd vendor/kafka; sleep 1; bin/kafka-server-start.sh config/server.properties\012"
+
+screen -t jistic
+stuff "./bin/jistic"

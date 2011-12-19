@@ -1,0 +1,13 @@
+#! /usr/bin/env node
+var kafka = require('kafka')
+
+var consumer = new kafka.Consumer({host: '127.0.0.1'});
+consumer.connect().subscribeTopic('test').on('message', function(topic, message) {
+    console.log("Consumed message:", message)
+})
+
+var producer = new kafka.Producer({host: '127.0.0.1'})
+producer.connect().on('connect', function() {
+    producer.send("hey!")
+    producer.close()
+})

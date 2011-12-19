@@ -1,0 +1,23 @@
+{
+  "name":        "jistic",
+  "version":     "0.0.1",
+  "author":      "Brandon Philips",
+  "keywords":    "circuitbreaker",
+  "description": "An API circuitbreaker",
+  "licenses":     [{
+    "type":       "MIT",
+    "url":        "http://github.com/philips/jistic/raw/master/LICENSE"
+  }],
+
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/philips/jistic.git"
+  },
+
+  "dependencies": {
+    "kafka": "https://github.com/philips/node-kafka/tarball/master"
+  },
+
+  "engine": "node > 0.6.0 < 0.7.0"
+}
+
